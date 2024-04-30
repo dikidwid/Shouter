@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0144AD2BE0C1D90037A08D /* hoop.reality in Resources */ = {isa = PBXBuildFile; fileRef = 3A0144AC2BE0C1D90037A08D /* hoop.reality */; };
+		3A0144AF2BE0C1E40037A08D /* ball.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A0144AE2BE0C1E40037A08D /* ball.usdz */; };
+		3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */; };
+		3A0144B32BE0C20E0037A08D /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0144B12BE0C20E0037A08D /* CustomARView.swift */; };
+		3A0144B72BE0C3350037A08D /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0144B62BE0C3350037A08D /* FocusEntity */; };
 		3A462F8F2BDB627F00147D38 /* ShouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A462F8E2BDB627F00147D38 /* ShouterApp.swift */; };
 		3A462F912BDB627F00147D38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A462F902BDB627F00147D38 /* ContentView.swift */; };
 		3A462F932BDB628000147D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A462F922BDB628000147D38 /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A0144AC2BE0C1D90037A08D /* hoop.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = hoop.reality; sourceTree = "<group>"; };
+		3A0144AE2BE0C1E40037A08D /* ball.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ball.usdz; sourceTree = "<group>"; };
+		3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
+		3A0144B12BE0C20E0037A08D /* CustomARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		3A0144B82BE0C37D0037A08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3A462F8B2BDB627F00147D38 /* Shouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A462F8E2BDB627F00147D38 /* ShouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouterApp.swift; sourceTree = "<group>"; };
 		3A462F902BDB627F00147D38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,12 +36,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0144B72BE0C3350037A08D /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A0144A92BE0C1B00037A08D /* 3DModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A0144AC2BE0C1D90037A08D /* hoop.reality */,
+				3A0144AE2BE0C1E40037A08D /* ball.usdz */,
+			);
+			path = 3DModel;
+			sourceTree = "<group>";
+		};
+		3A0144B42BE0C2200037A08D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3A0144B12BE0C20E0037A08D /* CustomARView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		3A462F822BDB627F00147D38 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +79,12 @@
 		3A462F8D2BDB627F00147D38 /* Shouter */ = {
 			isa = PBXGroup;
 			children = (
+				3A0144B82BE0C37D0037A08D /* Info.plist */,
+				3A0144B42BE0C2200037A08D /* UIKit */,
+				3A0144A92BE0C1B00037A08D /* 3DModel */,
 				3A462F8E2BDB627F00147D38 /* ShouterApp.swift */,
 				3A462F902BDB627F00147D38 /* ContentView.swift */,
+				3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */,
 				3A462F922BDB628000147D38 /* Assets.xcassets */,
 				3A462F942BDB628000147D38 /* Preview Content */,
 			);
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = Shouter;
+			packageProductDependencies = (
+				3A0144B62BE0C3350037A08D /* FocusEntity */,
+			);
 			productName = Shouter;
 			productReference = 3A462F8B2BDB627F00147D38 /* Shouter.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 3A462F822BDB627F00147D38;
+			packageReferences = (
+				3A0144B52BE0C3350037A08D /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 3A462F8C2BDB627F00147D38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +163,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0144AF2BE0C1E40037A08D /* ball.usdz in Resources */,
 				3A462F962BDB628000147D38 /* Preview Assets.xcassets in Resources */,
 				3A462F932BDB628000147D38 /* Assets.xcassets in Resources */,
+				3A0144AD2BE0C1D90037A08D /* hoop.reality in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +179,8 @@
 			files = (
 				3A462F912BDB627F00147D38 /* ContentView.swift in Sources */,
 				3A462F8F2BDB627F00147D38 /* ShouterApp.swift in Sources */,
+				3A0144B32BE0C20E0037A08D /* CustomARView.swift in Sources */,
+				3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +317,8 @@
 				DEVELOPMENT_TEAM = QJ4D5LRK3T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shouter/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera permission for playing this game/.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +348,8 @@
 				DEVELOPMENT_TEAM = QJ4D5LRK3T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shouter/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera permission for playing this game/.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A0144B52BE0C3350037A08D /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A0144B62BE0C3350037A08D /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A0144B52BE0C3350037A08D /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A462F832BDB627F00147D38 /* Project object */;
 }
