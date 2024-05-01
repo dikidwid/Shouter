@@ -164,7 +164,7 @@ private extension CustomARView {
         scene.addAnchor(anchorEntity)
         
         // Add the velocity to the object after it loaded
-        let impulseMagnitude: Float = -5
+        let impulseMagnitude: Float = basketballManager.impulseMagnitude
         let impulseVector = SIMD3<Float>(0, 0, impulseMagnitude)
         modelEntity.applyLinearImpulse(impulseVector, relativeTo: modelEntity.parent)
     }

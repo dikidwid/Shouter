@@ -19,6 +19,7 @@
 		3A462F932BDB628000147D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A462F922BDB628000147D38 /* Assets.xcassets */; };
 		3A462F962BDB628000147D38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A462F952BDB628000147D38 /* Preview Assets.xcassets */; };
 		3A9096CF2BE15878002CE41E /* ball.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A9096CE2BE15878002CE41E /* ball.usdz */; };
+		96139D912BE2786B0087777A /* MicInputLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96139D902BE2786B0087777A /* MicInputLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3A462F922BDB628000147D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A462F952BDB628000147D38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A9096CE2BE15878002CE41E /* ball.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ball.usdz; sourceTree = "<group>"; };
+		96139D902BE2786B0087777A /* MicInputLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicInputLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				3A2D91DB2BE1754C004ED740 /* ARManager.swift */,
 				3A462F902BDB627F00147D38 /* ContentView.swift */,
 				3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */,
+				96139D902BE2786B0087777A /* MicInputLevel.swift */,
 				3A462F922BDB628000147D38 /* Assets.xcassets */,
 				3A462F942BDB628000147D38 /* Preview Content */,
 			);
@@ -193,6 +196,7 @@
 				3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */,
 				3A2D91DE2BE1CCD4004ED740 /* BasketballManager.swift in Sources */,
 				3A2D91DC2BE1754C004ED740 /* ARManager.swift in Sources */,
+				96139D912BE2786B0087777A /* MicInputLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,11 +330,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shouter/Preview Content\"";
-				DEVELOPMENT_TEAM = QJ4D5LRK3T;
+				DEVELOPMENT_TEAM = 5T75SV584X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shouter/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera permission for playing this game/.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "woi open up da mic bic boi";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,11 +362,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shouter/Preview Content\"";
-				DEVELOPMENT_TEAM = QJ4D5LRK3T;
+				DEVELOPMENT_TEAM = 5T75SV584X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shouter/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera permission for playing this game/.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "woi open up da mic bic boi";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

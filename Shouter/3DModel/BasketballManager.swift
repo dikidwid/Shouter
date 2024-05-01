@@ -12,4 +12,6 @@ class BasketballManager: ObservableObject {
     
     @Published var totalShots: Int = 0
     @Published var totalScore: Int = 0
+    @Published var impulseMagnitude: Float = -1
+    @Published var dbLevel: Float = 0
 }
