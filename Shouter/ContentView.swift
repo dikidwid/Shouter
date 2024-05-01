@@ -10,9 +10,13 @@ import RealityKit
 
 struct ContentView: View {
     
-    @State private var isHoopEntityPlaced: Bool = false
-    @State private var shootBall: Bool = false
+    @State private var isShootFired: Bool = false
     @State private var isOnVerticalPlane: Bool = false
+    @State private var isHoopEntityPlaced: Bool = false
+    
+    @StateObject var basketballManager: BasketballManager = BasketballManager.shared
+    
+    var arManager: ARManager = ARManager.shared
     
     var screenOverlayGradientColor: RadialGradient {
         RadialGradient(colors: [isOnVerticalPlane ? .green : .red, .clear],
@@ -25,32 +29,30 @@ struct ContentView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            ARViewRepresentable(isOnVerticalPlane: $isOnVerticalPlane, isHoopEntityPlaced: $isHoopEntityPlaced, shootBall: $shootBall)
+            ARViewRepresentable()
                 .ignoresSafeArea()
                 .onTapGesture {
-                    isHoopEntityPlaced = true
+                    arManager.actionStream.send(.placeHoop)
                 }
-                .disabled(isHoopEntityPlaced)
-//                .overlay {
-//                    Rectangle()
-//                        .fill(screenOverlayGradientColor)
-//                        .ignoresSafeArea()
-//                }
             
-            if isHoopEntityPlaced {
-                VStack {
-                    Button {
-                        shootBall = true
-                    } label: {
-                        Image(systemName: "hand.tap.fill")
-                            .font(.system(size: 71))
-                            .foregroundStyle(.orange)
-                            .padding()
-                    }
+            VStack {
+                Text("Score \(basketballManager.totalScore)")
+                    .font(.title)
+                    .padding()
+                
+                Spacer()
+                
+                Button {
+                    arManager.actionStream.send(.shootBall)
+                } label: {
+                    Image(systemName: "hand.tap.fill")
+                        .font(.system(size: 71))
+                        .foregroundStyle(.orange)
+                        .padding()
                 }
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         }
     }
 }

@@ -7,28 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A0144AD2BE0C1D90037A08D /* hoop.reality in Resources */ = {isa = PBXBuildFile; fileRef = 3A0144AC2BE0C1D90037A08D /* hoop.reality */; };
-		3A0144AF2BE0C1E40037A08D /* ball.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A0144AE2BE0C1E40037A08D /* ball.usdz */; };
 		3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */; };
 		3A0144B32BE0C20E0037A08D /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0144B12BE0C20E0037A08D /* CustomARView.swift */; };
 		3A0144B72BE0C3350037A08D /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0144B62BE0C3350037A08D /* FocusEntity */; };
+		3A0144C62BE1451C0037A08D /* hoop.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A0144C52BE1451C0037A08D /* hoop.usdz */; };
+		3A2D91DC2BE1754C004ED740 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D91DB2BE1754C004ED740 /* ARManager.swift */; };
+		3A2D91DE2BE1CCD4004ED740 /* BasketballManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D91DD2BE1CCD4004ED740 /* BasketballManager.swift */; };
+		3A2D91E12BE1EC02004ED740 /* MultipeerSession in Frameworks */ = {isa = PBXBuildFile; productRef = 3A2D91E02BE1EC02004ED740 /* MultipeerSession */; };
 		3A462F8F2BDB627F00147D38 /* ShouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A462F8E2BDB627F00147D38 /* ShouterApp.swift */; };
 		3A462F912BDB627F00147D38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A462F902BDB627F00147D38 /* ContentView.swift */; };
 		3A462F932BDB628000147D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A462F922BDB628000147D38 /* Assets.xcassets */; };
 		3A462F962BDB628000147D38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A462F952BDB628000147D38 /* Preview Assets.xcassets */; };
+		3A9096CF2BE15878002CE41E /* ball.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A9096CE2BE15878002CE41E /* ball.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A0144AC2BE0C1D90037A08D /* hoop.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = hoop.reality; sourceTree = "<group>"; };
-		3A0144AE2BE0C1E40037A08D /* ball.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ball.usdz; sourceTree = "<group>"; };
 		3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		3A0144B12BE0C20E0037A08D /* CustomARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		3A0144B82BE0C37D0037A08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3A0144C52BE1451C0037A08D /* hoop.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = hoop.usdz; sourceTree = "<group>"; };
+		3A2D91DB2BE1754C004ED740 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
+		3A2D91DD2BE1CCD4004ED740 /* BasketballManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballManager.swift; sourceTree = "<group>"; };
 		3A462F8B2BDB627F00147D38 /* Shouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A462F8E2BDB627F00147D38 /* ShouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouterApp.swift; sourceTree = "<group>"; };
 		3A462F902BDB627F00147D38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A462F922BDB628000147D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A462F952BDB628000147D38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A9096CE2BE15878002CE41E /* ball.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ball.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A0144B72BE0C3350037A08D /* FocusEntity in Frameworks */,
+				3A2D91E12BE1EC02004ED740 /* MultipeerSession in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,8 +52,9 @@
 		3A0144A92BE0C1B00037A08D /* 3DModel */ = {
 			isa = PBXGroup;
 			children = (
-				3A0144AC2BE0C1D90037A08D /* hoop.reality */,
-				3A0144AE2BE0C1E40037A08D /* ball.usdz */,
+				3A9096CE2BE15878002CE41E /* ball.usdz */,
+				3A0144C52BE1451C0037A08D /* hoop.usdz */,
+				3A2D91DD2BE1CCD4004ED740 /* BasketballManager.swift */,
 			);
 			path = 3DModel;
 			sourceTree = "<group>";
@@ -83,6 +90,7 @@
 				3A0144B42BE0C2200037A08D /* UIKit */,
 				3A0144A92BE0C1B00037A08D /* 3DModel */,
 				3A462F8E2BDB627F00147D38 /* ShouterApp.swift */,
+				3A2D91DB2BE1754C004ED740 /* ARManager.swift */,
 				3A462F902BDB627F00147D38 /* ContentView.swift */,
 				3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */,
 				3A462F922BDB628000147D38 /* Assets.xcassets */,
@@ -117,6 +125,7 @@
 			name = Shouter;
 			packageProductDependencies = (
 				3A0144B62BE0C3350037A08D /* FocusEntity */,
+				3A2D91E02BE1EC02004ED740 /* MultipeerSession */,
 			);
 			productName = Shouter;
 			productReference = 3A462F8B2BDB627F00147D38 /* Shouter.app */;
@@ -148,6 +157,7 @@
 			mainGroup = 3A462F822BDB627F00147D38;
 			packageReferences = (
 				3A0144B52BE0C3350037A08D /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				3A2D91DF2BE1EC02004ED740 /* XCRemoteSwiftPackageReference "multipeer-session" */,
 			);
 			productRefGroup = 3A462F8C2BDB627F00147D38 /* Products */;
 			projectDirPath = "";
@@ -163,10 +173,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0144AF2BE0C1E40037A08D /* ball.usdz in Resources */,
+				3A9096CF2BE15878002CE41E /* ball.usdz in Resources */,
+				3A0144C62BE1451C0037A08D /* hoop.usdz in Resources */,
 				3A462F962BDB628000147D38 /* Preview Assets.xcassets in Resources */,
 				3A462F932BDB628000147D38 /* Assets.xcassets in Resources */,
-				3A0144AD2BE0C1D90037A08D /* hoop.reality in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +191,8 @@
 				3A462F8F2BDB627F00147D38 /* ShouterApp.swift in Sources */,
 				3A0144B32BE0C20E0037A08D /* CustomARView.swift in Sources */,
 				3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */,
+				3A2D91DE2BE1CCD4004ED740 /* BasketballManager.swift in Sources */,
+				3A2D91DC2BE1754C004ED740 /* ARManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +412,14 @@
 				minimumVersion = 2.5.1;
 			};
 		};
+		3A2D91DF2BE1EC02004ED740 /* XCRemoteSwiftPackageReference "multipeer-session" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RyanKopinskyLLC/multipeer-session";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -407,6 +427,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A0144B52BE0C3350037A08D /* XCRemoteSwiftPackageReference "FocusEntity" */;
 			productName = FocusEntity;
+		};
+		3A2D91E02BE1EC02004ED740 /* MultipeerSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A2D91DF2BE1EC02004ED740 /* XCRemoteSwiftPackageReference "multipeer-session" */;
+			productName = MultipeerSession;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
