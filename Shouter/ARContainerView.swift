@@ -23,23 +23,23 @@ struct ARContainerView: View {
     
     var body: some View {
         ZStack {
-            //            ARViewRepresentable()
-            //                .ignoresSafeArea()
-            //                .onTapGesture {
-            //                    arManager.actionStream.send(.placeHoop)
-            //                }
+                        ARViewRepresentable()
+                            .ignoresSafeArea()
+                            .onTapGesture {
+                                arManager.actionStream.send(.placeHoop)
+                            }
             
-//            Button {
-//                arManager.actionStream.send(.shootBall)
-//            } label: {
-//                Image(systemName: "hand.tap.fill")
-//                    .font(.system(size: 71))
-//                    .foregroundStyle(.orange)
-//                    .padding()
-//            }
-//            .padding()
-//            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-//            
+            Button {
+                arManager.actionStream.send(.shootBall)
+            } label: {
+                Image(systemName: "hand.tap.fill")
+                    .font(.system(size: 71))
+                    .foregroundStyle(.orange)
+                    .padding()
+            }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+            
             GameView(isPaused: $isPaused, isTimerRunning: $isTimerRunning, progressBarValue: $progressBarValue)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }

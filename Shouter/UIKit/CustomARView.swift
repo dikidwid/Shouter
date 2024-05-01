@@ -157,14 +157,14 @@ private extension CustomARView {
         let sphereShape = ShapeResource.generateSphere(radius: 0.110)
             .offsetBy(translation: [0, 0.1, 0])
         modelEntity.collision = CollisionComponent(shapes: [sphereShape], mode: .default)
-
+        
         // Add the modelEntity the ARView's scene
         let anchorEntity = AnchorEntity(.camera)
         anchorEntity.addChild(modelEntity)
         scene.addAnchor(anchorEntity)
         
         // Add the velocity to the object after it loaded
-        let impulseMagnitude: Float = -5
+        let impulseMagnitude: Float = basketballManager.impulseMagnitude
         let impulseVector = SIMD3<Float>(0, 0, impulseMagnitude)
         modelEntity.applyLinearImpulse(impulseVector, relativeTo: modelEntity.parent)
     }

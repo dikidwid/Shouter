@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */; };
 		3A0144B32BE0C20E0037A08D /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0144B12BE0C20E0037A08D /* CustomARView.swift */; };
 		3A0144B72BE0C3350037A08D /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0144B62BE0C3350037A08D /* FocusEntity */; };
 		3A0144C62BE1451C0037A08D /* hoop.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A0144C52BE1451C0037A08D /* hoop.usdz */; };
 		3A2D91DC2BE1754C004ED740 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D91DB2BE1754C004ED740 /* ARManager.swift */; };
 		3A2D91DE2BE1CCD4004ED740 /* BasketballManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D91DD2BE1CCD4004ED740 /* BasketballManager.swift */; };
 		3A2D91E12BE1EC02004ED740 /* MultipeerSession in Frameworks */ = {isa = PBXBuildFile; productRef = 3A2D91E02BE1EC02004ED740 /* MultipeerSession */; };
-		3A2D91E72BE1F074004ED740 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D91E62BE1F074004ED740 /* ViewController.swift */; };
 		3A462F8F2BDB627F00147D38 /* ShouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A462F8E2BDB627F00147D38 /* ShouterApp.swift */; };
 		3A462F912BDB627F00147D38 /* ARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A462F902BDB627F00147D38 /* ARContainerView.swift */; };
 		3A462F932BDB628000147D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A462F922BDB628000147D38 /* Assets.xcassets */; };
@@ -24,16 +22,16 @@
 		3AD6C8B32BE276AD00A52C06 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C8B22BE276AD00A52C06 /* GameView.swift */; };
 		3AD6C8B52BE276B200A52C06 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C8B42BE276B200A52C06 /* PauseView.swift */; };
 		3AD6C8B72BE276B700A52C06 /* TimesUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C8B62BE276B700A52C06 /* TimesUpScreen.swift */; };
+		969B1C472BE2AF61001C6338 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B1C462BE2AF61001C6338 /* ARViewRepresentable.swift */; };
+		969B1C492BE2AF79001C6338 /* MicInputLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B1C482BE2AF79001C6338 /* MicInputLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		3A0144B12BE0C20E0037A08D /* CustomARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		3A0144B82BE0C37D0037A08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3A0144C52BE1451C0037A08D /* hoop.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = hoop.usdz; sourceTree = "<group>"; };
 		3A2D91DB2BE1754C004ED740 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 		3A2D91DD2BE1CCD4004ED740 /* BasketballManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballManager.swift; sourceTree = "<group>"; };
-		3A2D91E62BE1F074004ED740 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A462F8B2BDB627F00147D38 /* Shouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A462F8E2BDB627F00147D38 /* ShouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouterApp.swift; sourceTree = "<group>"; };
 		3A462F902BDB627F00147D38 /* ARContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContainerView.swift; sourceTree = "<group>"; };
@@ -44,6 +42,8 @@
 		3AD6C8B22BE276AD00A52C06 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3AD6C8B42BE276B200A52C06 /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		3AD6C8B62BE276B700A52C06 /* TimesUpScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesUpScreen.swift; sourceTree = "<group>"; };
+		969B1C462BE2AF61001C6338 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
+		969B1C482BE2AF79001C6338 /* MicInputLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicInputLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0144B12BE0C20E0037A08D /* CustomARView.swift */,
-				3A2D91E62BE1F074004ED740 /* ViewController.swift */,
-				3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */,
+				969B1C462BE2AF61001C6338 /* ARViewRepresentable.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -102,6 +101,7 @@
 				3A0144B42BE0C2200037A08D /* UIKit */,
 				3A0144A92BE0C1B00037A08D /* 3DModel */,
 				3A462F8E2BDB627F00147D38 /* ShouterApp.swift */,
+				969B1C482BE2AF79001C6338 /* MicInputLevel.swift */,
 				3AD6C8B02BE276A700A52C06 /* LandingPageView.swift */,
 				3A462F902BDB627F00147D38 /* ARContainerView.swift */,
 				3AD6C8B22BE276AD00A52C06 /* GameView.swift */,
@@ -212,13 +212,13 @@
 			files = (
 				3A462F912BDB627F00147D38 /* ARContainerView.swift in Sources */,
 				3AD6C8B72BE276B700A52C06 /* TimesUpScreen.swift in Sources */,
+				969B1C472BE2AF61001C6338 /* ARViewRepresentable.swift in Sources */,
 				3A462F8F2BDB627F00147D38 /* ShouterApp.swift in Sources */,
 				3AD6C8B52BE276B200A52C06 /* PauseView.swift in Sources */,
 				3A0144B32BE0C20E0037A08D /* CustomARView.swift in Sources */,
 				3AD6C8B32BE276AD00A52C06 /* GameView.swift in Sources */,
-				3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */,
-				3A2D91E72BE1F074004ED740 /* ViewController.swift in Sources */,
 				3A2D91DE2BE1CCD4004ED740 /* BasketballManager.swift in Sources */,
+				969B1C492BE2AF79001C6338 /* MicInputLevel.swift in Sources */,
 				3AD6C8B12BE276A700A52C06 /* LandingPageView.swift in Sources */,
 				3A2D91DC2BE1754C004ED740 /* ARManager.swift in Sources */,
 			);
@@ -354,12 +354,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shouter/Preview Content\"";
-				DEVELOPMENT_TEAM = QJ4D5LRK3T;
+				DEVELOPMENT_TEAM = 5T75SV584X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shouter/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera permission for playing this game/.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = 1.0;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "open up da mic bic boi";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -387,12 +388,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shouter/Preview Content\"";
-				DEVELOPMENT_TEAM = QJ4D5LRK3T;
+				DEVELOPMENT_TEAM = 5T75SV584X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shouter/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera permission for playing this game/.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = 1.0;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "open up da mic bic boi";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

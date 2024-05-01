@@ -70,6 +70,7 @@ struct LandingPageView: View {
             }
         }
         .onAppear {
+            setUpAudioCapture()
             withAnimation(.easeInOut(duration: 3)) {
                 isBallAnimating = true
             }
