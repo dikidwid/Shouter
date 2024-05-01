@@ -12,4 +12,5 @@ class BasketballManager: ObservableObject {
     
     @Published var totalShots: Int = 0
     @Published var totalScore: Int = 0
+    @Published var isHoopEntityPlaced: Bool = false
 }
