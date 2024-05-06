@@ -7,43 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */; };
 		3A0144B32BE0C20E0037A08D /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0144B12BE0C20E0037A08D /* CustomARView.swift */; };
 		3A0144B72BE0C3350037A08D /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0144B62BE0C3350037A08D /* FocusEntity */; };
 		3A0144C62BE1451C0037A08D /* hoop.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A0144C52BE1451C0037A08D /* hoop.usdz */; };
 		3A2D91DC2BE1754C004ED740 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D91DB2BE1754C004ED740 /* ARManager.swift */; };
 		3A2D91DE2BE1CCD4004ED740 /* BasketballManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D91DD2BE1CCD4004ED740 /* BasketballManager.swift */; };
 		3A2D91E12BE1EC02004ED740 /* MultipeerSession in Frameworks */ = {isa = PBXBuildFile; productRef = 3A2D91E02BE1EC02004ED740 /* MultipeerSession */; };
-		3A2D91E72BE1F074004ED740 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D91E62BE1F074004ED740 /* ViewController.swift */; };
 		3A462F8F2BDB627F00147D38 /* ShouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A462F8E2BDB627F00147D38 /* ShouterApp.swift */; };
 		3A462F912BDB627F00147D38 /* ARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A462F902BDB627F00147D38 /* ARContainerView.swift */; };
 		3A462F932BDB628000147D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A462F922BDB628000147D38 /* Assets.xcassets */; };
 		3A462F962BDB628000147D38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A462F952BDB628000147D38 /* Preview Assets.xcassets */; };
+		3A65BD042BE8E9B500645C06 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65BD032BE8E9B500645C06 /* ProgressBarView.swift */; };
 		3A9096CF2BE15878002CE41E /* ball.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3A9096CE2BE15878002CE41E /* ball.usdz */; };
 		3AD6C8B12BE276A700A52C06 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C8B02BE276A700A52C06 /* LandingPageView.swift */; };
 		3AD6C8B32BE276AD00A52C06 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C8B22BE276AD00A52C06 /* GameView.swift */; };
 		3AD6C8B52BE276B200A52C06 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C8B42BE276B200A52C06 /* PauseView.swift */; };
-		3AD6C8B72BE276B700A52C06 /* TimesUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C8B62BE276B700A52C06 /* TimesUpScreen.swift */; };
+		3AD6C8B72BE276B700A52C06 /* TimesUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6C8B62BE276B700A52C06 /* TimesUpView.swift */; };
+		3AFAD4842BE2AC640023F13E /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFAD4832BE2AC640023F13E /* ARViewRepresentable.swift */; };
+		3AFAD4862BE328CB0023F13E /* MicInputLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFAD4852BE328CB0023F13E /* MicInputLevel.swift */; };
+		3AFAD4892BE32C360023F13E /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFAD4882BE32C360023F13E /* AudioPlayer.swift */; };
+		3AFAD48B2BE32D940023F13E /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3AFAD48A2BE32D940023F13E /* BGM.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		3A0144B12BE0C20E0037A08D /* CustomARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		3A0144B82BE0C37D0037A08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3A0144C52BE1451C0037A08D /* hoop.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = hoop.usdz; sourceTree = "<group>"; };
 		3A2D91DB2BE1754C004ED740 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 		3A2D91DD2BE1CCD4004ED740 /* BasketballManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballManager.swift; sourceTree = "<group>"; };
-		3A2D91E62BE1F074004ED740 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A462F8B2BDB627F00147D38 /* Shouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A462F8E2BDB627F00147D38 /* ShouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouterApp.swift; sourceTree = "<group>"; };
 		3A462F902BDB627F00147D38 /* ARContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContainerView.swift; sourceTree = "<group>"; };
 		3A462F922BDB628000147D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A462F952BDB628000147D38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A65BD032BE8E9B500645C06 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		3A9096CE2BE15878002CE41E /* ball.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ball.usdz; sourceTree = "<group>"; };
 		3AD6C8B02BE276A700A52C06 /* LandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		3AD6C8B22BE276AD00A52C06 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3AD6C8B42BE276B200A52C06 /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
-		3AD6C8B62BE276B700A52C06 /* TimesUpScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesUpScreen.swift; sourceTree = "<group>"; };
+		3AD6C8B62BE276B700A52C06 /* TimesUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesUpView.swift; sourceTree = "<group>"; };
+		3AFAD4832BE2AC640023F13E /* ARViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
+		3AFAD4852BE328CB0023F13E /* MicInputLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicInputLevel.swift; sourceTree = "<group>"; };
+		3AFAD4882BE32C360023F13E /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		3AFAD48A2BE32D940023F13E /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,16 +74,6 @@
 			path = 3DModel;
 			sourceTree = "<group>";
 		};
-		3A0144B42BE0C2200037A08D /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				3A0144B12BE0C20E0037A08D /* CustomARView.swift */,
-				3A2D91E62BE1F074004ED740 /* ViewController.swift */,
-				3A0144B02BE0C20E0037A08D /* ARViewRepresentable.swift */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
 		3A462F822BDB627F00147D38 = {
 			isa = PBXGroup;
 			children = (
@@ -97,16 +93,14 @@
 		3A462F8D2BDB627F00147D38 /* Shouter */ = {
 			isa = PBXGroup;
 			children = (
-				3A5D671A2BE2449200BC34EF /* Shared */,
-				3A0144B82BE0C37D0037A08D /* Info.plist */,
-				3A0144B42BE0C2200037A08D /* UIKit */,
 				3A0144A92BE0C1B00037A08D /* 3DModel */,
-				3A462F8E2BDB627F00147D38 /* ShouterApp.swift */,
-				3AD6C8B02BE276A700A52C06 /* LandingPageView.swift */,
-				3A462F902BDB627F00147D38 /* ARContainerView.swift */,
-				3AD6C8B22BE276AD00A52C06 /* GameView.swift */,
-				3AD6C8B42BE276B200A52C06 /* PauseView.swift */,
-				3AD6C8B62BE276B700A52C06 /* TimesUpScreen.swift */,
+				3A0144B82BE0C37D0037A08D /* Info.plist */,
+				3A65BCFF2BE8E23000645C06 /* AudioPlayer */,
+				3A65BCFE2BE8E11600645C06 /* ARKit */,
+				3AFAD4872BE3293C0023F13E /* AudioInput */,
+				3A5D671A2BE2449200BC34EF /* Shared */,
+				3A65BD002BE8E60A00645C06 /* Screen */,
+				3A65BD022BE8E7E900645C06 /* App */,
 				3A462F922BDB628000147D38 /* Assets.xcassets */,
 				3A462F942BDB628000147D38 /* Preview Content */,
 			);
@@ -128,6 +122,53 @@
 				3A2D91DB2BE1754C004ED740 /* ARManager.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		3A65BCFE2BE8E11600645C06 /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				3A0144B12BE0C20E0037A08D /* CustomARView.swift */,
+				3AFAD4832BE2AC640023F13E /* ARViewRepresentable.swift */,
+			);
+			path = ARKit;
+			sourceTree = "<group>";
+		};
+		3A65BCFF2BE8E23000645C06 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3AFAD48A2BE32D940023F13E /* BGM.mp3 */,
+				3AFAD4882BE32C360023F13E /* AudioPlayer.swift */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		3A65BD002BE8E60A00645C06 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6C8B02BE276A700A52C06 /* LandingPageView.swift */,
+				3A462F902BDB627F00147D38 /* ARContainerView.swift */,
+				3AD6C8B22BE276AD00A52C06 /* GameView.swift */,
+				3AD6C8B42BE276B200A52C06 /* PauseView.swift */,
+				3AD6C8B62BE276B700A52C06 /* TimesUpView.swift */,
+				3A65BD032BE8E9B500645C06 /* ProgressBarView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3A65BD022BE8E7E900645C06 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3A462F8E2BDB627F00147D38 /* ShouterApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3AFAD4872BE3293C0023F13E /* AudioInput */ = {
+			isa = PBXGroup;
+			children = (
+				3AFAD4852BE328CB0023F13E /* MicInputLevel.swift */,
+			);
+			path = AudioInput;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +240,7 @@
 				3A9096CF2BE15878002CE41E /* ball.usdz in Resources */,
 				3A0144C62BE1451C0037A08D /* hoop.usdz in Resources */,
 				3A462F962BDB628000147D38 /* Preview Assets.xcassets in Resources */,
+				3AFAD48B2BE32D940023F13E /* BGM.mp3 in Resources */,
 				3A462F932BDB628000147D38 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,16 +253,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A462F912BDB627F00147D38 /* ARContainerView.swift in Sources */,
-				3AD6C8B72BE276B700A52C06 /* TimesUpScreen.swift in Sources */,
+				3AD6C8B72BE276B700A52C06 /* TimesUpView.swift in Sources */,
+				3AFAD4842BE2AC640023F13E /* ARViewRepresentable.swift in Sources */,
 				3A462F8F2BDB627F00147D38 /* ShouterApp.swift in Sources */,
 				3AD6C8B52BE276B200A52C06 /* PauseView.swift in Sources */,
 				3A0144B32BE0C20E0037A08D /* CustomARView.swift in Sources */,
 				3AD6C8B32BE276AD00A52C06 /* GameView.swift in Sources */,
-				3A0144B22BE0C20E0037A08D /* ARViewRepresentable.swift in Sources */,
-				3A2D91E72BE1F074004ED740 /* ViewController.swift in Sources */,
 				3A2D91DE2BE1CCD4004ED740 /* BasketballManager.swift in Sources */,
+				3AFAD4862BE328CB0023F13E /* MicInputLevel.swift in Sources */,
 				3AD6C8B12BE276A700A52C06 /* LandingPageView.swift in Sources */,
 				3A2D91DC2BE1754C004ED740 /* ARManager.swift in Sources */,
+				3A65BD042BE8E9B500645C06 /* ProgressBarView.swift in Sources */,
+				3AFAD4892BE32C360023F13E /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +403,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shouter/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera permission for playing this game/.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = 1.0;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,7 +437,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shouter/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need your camera permission for playing this game/.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = 1.0;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
