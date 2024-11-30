@@ -94,7 +94,7 @@ private extension CustomARView {
                 case .repositionHoop:
                     self?.removeModelEntity(name: "hoop")
                 case .placeHoop:
-                    self?.placeModelEntity(name: "hoop", withAlignment: .plane(.any, classification: .any, minimumBounds: SIMD2()))
+                    self?.placeModelEntity(name: "hoop", withAlignment: .plane(.any, classification: .any, minimumBounds: .init()))
                 }
             }
             .store(in: &cancellables)

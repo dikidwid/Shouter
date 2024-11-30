@@ -55,30 +55,21 @@ private func captureAudio() {
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
             audioRecorder.updateMeters()
             let db = audioRecorder.averagePower(forChannel: 0)
-            //                let normalizedDB = (db - 0) / (-160 - 0)
-            //                let scale1to10 = (normalizedDB * 9) + 1
             
-//            print(db)
             BasketballManager.shared.decible = db
             
             switch db {
             case -22...(-17):
                 BasketballManager.shared.impulseMagnitude = -5
-//                ARManager.shared.actionStream.send(.shootBall)
             case -16...(-11):
-                print("-10")
                 BasketballManager.shared.impulseMagnitude = -7
             case -10...(-6):
-                print("-15")
                 BasketballManager.shared.impulseMagnitude = -10
             case -5...4:
-                print("-15")
                 BasketballManager.shared.impulseMagnitude = -14
             case -3...0:
-                print("-30")
                 BasketballManager.shared.impulseMagnitude = -30
             default:
-                print("-1")
                 BasketballManager.shared.impulseMagnitude = -1
             }
         }
