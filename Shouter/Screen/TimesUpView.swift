@@ -59,8 +59,7 @@ struct TimesUpView: View {
         Button {
             withAnimation {
                 isShowARContainerView = false
-                basketballManager.totalScore = 0
-                basketballManager.isHoopEntityPlaced = false
+                basketballManager.restartGame()
             }
         } label: {
             Circle()

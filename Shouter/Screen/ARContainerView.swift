@@ -13,10 +13,6 @@ struct ARContainerView: View {
     @Binding var isShowARContainerView: Bool
     @Binding var isMuted: Bool
     
-    @State private var isPaused: Bool = false
-    @State private var isTimerRunning: Bool = true
-    @State private var progressBarValue: Float = 0.0
-    
     @State private var isHandTapAnimating: Bool = false
     
     @StateObject var basketballManager: BasketballManager = BasketballManager.shared
@@ -26,43 +22,50 @@ struct ARContainerView: View {
     var body: some View {
         ZStack {
             createARViewContainer()
-            
-            if basketballManager.isHoopEntityPlaced {
+                        
+            if basketballManager.isShowGameOverlay {
                     
                 createSoundMeterBarIndicator()
                     
                 createShootBallButton()
                 
                 createGameView()
+            } else {
+                createPlaceHoopButton()
             }
         }
         .overlay {
-            if isPaused {
+            if basketballManager.isPaused {
                 showPausedPopupMenu()
             }
             
-            if progressBarValue >= 1 {
+            if basketballManager.progressBarValue >= 1 {
                 showTimesPopupMenu()
             }
         }
     }
     
     @ViewBuilder private func showTimesPopupMenu() -> some View {
-        TimesUpView(isShowARContainerView: $isShowARContainerView, isTimerRunning: $isTimerRunning, progressBarValue: $progressBarValue)
+        TimesUpView(isShowARContainerView: $isShowARContainerView,
+                    isTimerRunning: $basketballManager.isTimerRunning,
+                    progressBarValue: $basketballManager.progressBarValue)
     }
     
     @ViewBuilder private func showPausedPopupMenu() -> some View {
         PauseView(isShowARCointainerView: $isShowARContainerView,
                   isMuted: $isMuted,
-                  isPaused: $isPaused,
-                  isTimerRunning: $isTimerRunning,
-                  progressBarValue: $progressBarValue)
+                  isPaused: $basketballManager.isPaused,
+                  isTimerRunning: $basketballManager.isTimerRunning,
+                  progressBarValue: $basketballManager.progressBarValue)
     }
     
     @ViewBuilder private func createGameView() -> some View {
-        GameView(isPaused: $isPaused, isTimerRunning: $isTimerRunning, progressBarValue: $progressBarValue)
+        GameView(isPaused: $basketballManager.isPaused,
+                 isTimerRunning: $basketballManager.isTimerRunning,
+                 progressBarValue: $basketballManager.progressBarValue)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
+    
     
     @ViewBuilder private func createShootBallButton() -> some View {
         Button {
@@ -74,13 +77,13 @@ struct ARContainerView: View {
                 .scaleEffect(basketballManager.isHoopEntityPlaced ? 1 : 1)
                 .symbolEffect(.bounce, options: .repeating, value: isHandTapAnimating)
                 .onAppear {
-                        isHandTapAnimating.toggle()
+                    isHandTapAnimating.toggle()
                     
                 }
                 .padding()
         }
         .padding()
-    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
     }
     
     @ViewBuilder private func createSoundMeterBarIndicator() -> some View {
@@ -94,11 +97,38 @@ struct ARContainerView: View {
         .offset(x: 150)
     }
     
+    @ViewBuilder private func createPlaceHoopButton() -> some View {
+        Button {
+            basketballManager.isTimerRunning = true
+            arManager.actionStream.send(.placeHoop)
+        } label: {
+            Image(systemName: "plus.viewfinder")
+                .font(.system(size: 71))
+                .foregroundStyle(.orange)
+                .symbolEffect(.bounce, options: .repeating, value: isHandTapAnimating)
+                .onAppear {
+                    isHandTapAnimating.toggle()
+                }
+                .padding()
+        }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .opacity(basketballManager.isHoopPlaceAble ? 1 : 0)
+    }
+    
     @ViewBuilder private func createARViewContainer() -> some View {
         ARViewRepresentable()
             .ignoresSafeArea()
-            .onTapGesture {
-                arManager.actionStream.send(.placeHoop)
+            .overlay {
+                Group {
+                    if basketballManager.isHoopPlaceAble {
+                        Color.green.opacity(0.4)
+                    } else {
+                        Color.red.opacity(0.4)
+                    }
+                }
+                .ignoresSafeArea()
+                .opacity(basketballManager.isHoopEntityPlaced ? 0 : 1)
             }
     }
 }

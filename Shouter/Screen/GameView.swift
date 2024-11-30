@@ -25,6 +25,8 @@ struct GameView: View {
         GridItem(.flexible())
     ]
     
+    @State private var timer: Timer?
+    
     var body: some View {
         VStack {
             HStack {
@@ -40,10 +42,14 @@ struct GameView: View {
         .onAppear {
             updateTimerBar()
         }
+        .onDisappear() {
+            timer?.invalidate()
+            timer = nil
+        }
     }
     
     private func updateTimerBar() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             guard isTimerRunning else { return }
             if progressBarValue >= 1.0 {
                 isTimerRunning = false
@@ -69,10 +75,7 @@ struct GameView: View {
     
     @ViewBuilder private func createRepositionButton() -> some View {
         Button {
-            progressBarValue = 0
-            BasketballManager.shared.totalScore = 0
-            BasketballManager.shared.isHoopEntityPlaced = false
-            ARManager.shared.actionStream.send(.repositionHoop)
+            BasketballManager.shared.restartGame()
         } label: {
             Image(systemName: "arkit")
                 .font(.system(.title2, weight: .bold))

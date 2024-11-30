@@ -16,7 +16,7 @@ struct PauseView: View {
     @Binding var isTimerRunning: Bool
     @Binding var progressBarValue: Float
     
-    let audioPlayer: AudioPlayer = AudioPlayer()
+    let audioPlayer: AudioPlayer = AudioPlayer.shared
     let basketballManager: BasketballManager = BasketballManager.shared
     
     var body: some View {
@@ -42,12 +42,12 @@ struct PauseView: View {
     @ViewBuilder private func createMuteButton() -> some View {
         Button {
             if isMuted {
-                audioPlayer.playMusic()
+                audioPlayer.unMuteMusic()
                 withAnimation {
                     isMuted = false
                 }
             } else {
-                audioPlayer.stopMusic()
+                audioPlayer.mutemusic()
                 withAnimation {
                     isMuted = true
                 }
@@ -70,8 +70,8 @@ struct PauseView: View {
             withAnimation {
                 isShowARCointainerView = false
                 isPaused = false
-                basketballManager.totalScore = 0
-                basketballManager.isHoopEntityPlaced = false
+                
+                basketballManager.restartGame()
             }
         } label: {
             Circle()

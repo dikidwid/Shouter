@@ -15,7 +15,7 @@ struct LandingPageView: View {
     @State private var isShowAnimating: Bool = false
     @State private var isPlayButtonAnimating: Bool = false
     
-    let audioPlayer: AudioPlayer = AudioPlayer()
+    let audioPlayer: AudioPlayer = AudioPlayer.shared
     
     var body: some View {
         ZStack {
@@ -66,12 +66,12 @@ struct LandingPageView: View {
     @ViewBuilder private func createMuteButton() -> some View {
         Button {
             if isMuted {
-                audioPlayer.playMusic()
+                audioPlayer.unMuteMusic()
                 withAnimation {
                     isMuted = false
                 }
             } else {
-                audioPlayer.stopMusic()
+                audioPlayer.mutemusic()
                 withAnimation {
                     isMuted = true
                 }

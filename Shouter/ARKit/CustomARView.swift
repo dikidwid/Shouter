@@ -42,6 +42,8 @@ class CustomARView: ARView {
         
         setupARView()
         
+        setupARCoachingOverlay()
+        
         collisionSubscription = scene.publisher(for: CollisionEvents.Began.self,
                                                 on: nil).sink(receiveValue: onCollisionBegan)
         
@@ -56,7 +58,7 @@ class CustomARView: ARView {
 private extension CustomARView {
     
     func setupFocusEntity() {
-        focusEntity = FocusEntity(on: self, style: .classic(color: .clear))
+        focusEntity = FocusEntity(on: self, style: .classic(color: .white))
         focusEntity?.setAutoUpdate(to: true)
         focusEntity?.delegate = self
     }
@@ -104,6 +106,7 @@ private extension CustomARView {
         guard let hoopEntity = scene.findEntity(named: name),
               let anchor = hoopEntity.anchor else { return }
         scene.removeAnchor(anchor)
+        focusEntity?.isEnabled = true
     }
     
     func placeModelEntity(name: String, withAlignment alignment: AnchoringComponent.Target) {
@@ -186,17 +189,60 @@ private extension CustomARView {
     }
 }
 
+extension CustomARView: ARCoachingOverlayViewDelegate {
+    func setupARCoachingOverlay() {
+        let coachingOverlay = ARCoachingOverlayView()
+        coachingOverlay.autoresizingMask = [
+            .flexibleWidth, .flexibleHeight
+        ]
+        self.addSubview(coachingOverlay)
+        coachingOverlay.goal = .verticalPlane
+        coachingOverlay.session = self.session
+        coachingOverlay.delegate = self
+    }
+    
+    func coachingOverlayViewDidRequestSessionReset(_ coachingOverlayView: ARCoachingOverlayView) {
+
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .vertical
+        configuration.environmentTexturing = .automatic
+        configuration.frameSemantics = [.personSegmentation, .personSegmentationWithDepth]
+        session.delegate = self
+        session.run(configuration, options: [.resetTracking])
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
+            configuration.sceneReconstruction = .mesh
+        }
+                
+        self.session.run(configuration, options: [.resetTracking])
+    }
+    
+    func coachingOverlayViewWillActivate(_ coachingOverlayView: ARCoachingOverlayView) {
+//        basketballManager.stopGame()
+        focusEntity?.isEnabled = false
+    }
+    
+    func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
+//        basketballManager.startGame()
+        focusEntity?.isEnabled = true
+    }
+}
+
 extension CustomARView: ARSessionDelegate {
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         if let _ = scene.findEntity(named: "hoop") {
-            BasketballManager.shared.isHoopEntityPlaced = true
+            basketballManager.isShowGameOverlay = true
+            basketballManager.isHoopEntityPlaced = true
+            focusEntity?.isEnabled = false
         }
     }
 }
 
 extension CustomARView: FocusEntityDelegate {
-    func focusEntity(_ focusEntity: FocusEntity, trackingUpdated trackingState: FocusEntity.State, oldState: FocusEntity.State?) {
-                
-        delegate?.didFind(verticalPlane: focusEntity.onPlane)
+    func focusEntity(_ focusEntity: FocusEntity, planeChanged: ARPlaneAnchor?, oldPlane: ARPlaneAnchor?) {
+        if let planeChanged, planeChanged.alignment == .vertical {
+            basketballManager.isHoopPlaceAble = true
+        } else {
+            basketballManager.isHoopPlaceAble = false
+        }
     }
 }
